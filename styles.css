@@ -225,6 +225,9 @@
 }
 
 /* project css */
+section.my__project {
+    background: #141010;
+}
 .hover-4 {
     position: relative;
     overflow: hidden;
@@ -237,7 +240,6 @@
 }
 
 .hover-4 .hover-overlay {
-    background: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
     left: 0;
