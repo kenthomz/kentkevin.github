@@ -159,6 +159,81 @@
 .name span:nth-child(11) {
     animation-delay: 1s;
 }
+/* skills section */
+.card {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 10px 0;
+}
+
+.card-title {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.front__skills .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+    .col-md-2 {
+        flex: 0 0 18%;
+        max-width: 18%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Animation setup */
+.animated-column {
+    opacity: 0;
+    transform: translateX(0);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+/* Animation for sliding from the right */
+.animate-right {
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding from the left */
+.animate-left {
+    animation-name: slide-in-left;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 </style>
 <body>
@@ -193,28 +268,31 @@
     <div class="container">
         <div class="header-content">
             <div class="right-header">
-                <p>Hi,</p>
-                <div class="span loader">
-                    <span class="m">I'M</span>
-                    <span class="m">&nbsp;</span>
-                    <span class="m">K</span>
-                    <span class="m">e</span>
-                    <span class="m">n</span>
-                    <span class="m">t</span>
-                    <span class="m">&nbsp;</span>
-                    <span class="m">K</span>
-                    <span class="m">e</span>
-                    <span class="m">v</span>
-                    <span class="m">i</span>
-                    <span class="m">n</span>
-                    <span class="m">&nbsp;</span>
-                    <span class="m">T</span>
-                    <span class="m">o</span>
-                    <span class="m">m</span>
-                    <span class="m">e</span>
-                    <span class="m">s</span>
-                    <span class="m">a</span>
-                    </div>
+                <div class="name">
+                    <p>Hi,</p>
+                    <div class="span loader">
+                        <span class="m">I'M</span>
+                        <span class="m">&nbsp;</span>
+                        <span class="m">K</span>
+                        <span class="m">e</span>
+                        <span class="m">n</span>
+                        <span class="m">t</span>
+                        <span class="m">&nbsp;</span>
+                        <span class="m">K</span>
+                        <span class="m">e</span>
+                        <span class="m">v</span>
+                        <span class="m">i</span>
+                        <span class="m">n</span>
+                        <span class="m">&nbsp;</span>
+                        <span class="m">T</span>
+                        <span class="m">o</span>
+                        <span class="m">m</span>
+                        <span class="m">e</span>
+                        <span class="m">s</span>
+                        <span class="m">a</span>
+                        </div>
+                </div>
+  
                 <p class="intro">
                   Website Developer specializing in e-commerce websites with expertise in WordPress Development and Shopify Development. I excel in crafting dynamic online experiences. Let's collaborate and bring your e-commerce vision to life!
                 </p>
@@ -232,124 +310,57 @@
 <section class="front__skills">
     <div class="container mt-5">
         <div class="row justify-content-center">
-          <!-- Card 1 -->
-          <div class="col-md-2">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title 1</h5>
-                <p class="card-text">Some quick example text.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-md-2">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title 2</h5>
-                <p class="card-text">Some quick example text.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-md-2">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title 3</h5>
-                <p class="card-text">Some quick example text.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div class="col-md-2">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title 4</h5>
-                <p class="card-text">Some quick example text.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div class="col-md-2">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title 5</h5>
-                <p class="card-text">Some quick example text.</p>
-              </div>
-            </div>
-          </div>
-             <!-- Card 5 -->
-             <div class="col-md-2">
+            <!-- Card 1 -->
+            <div class="col-md-2 animated-column animate-right">
                 <div class="card">
-                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title 5</h5>
-                    <p class="card-text">Some quick example text.</p>
-                  </div>
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 1</h5>
+                    </div>
                 </div>
-              </div>
-              
-                 <!-- Card 6 -->
-          <div class="col-md-2">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title 5</h5>
-                <p class="card-text">Some quick example text.</p>
-              </div>
             </div>
-          </div>
-
-             <!-- Card 7 -->
-             <div class="col-md-2">
+            <!-- Card 2 -->
+            <div class="col-md-2 animated-column animate-left">
                 <div class="card">
-                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title 5</h5>
-                    <p class="card-text">Some quick example text.</p>
-                  </div>
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 2</h5>
+                    </div>
                 </div>
-              </div>
-                <!-- Card 8 -->
-             <div class="col-md-2">
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-2 animated-column animate-right">
                 <div class="card">
-                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title 5</h5>
-                    <p class="card-text">Some quick example text.</p>
-                  </div>
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 3</h5>
+                    </div>
                 </div>
-              </div>
-                <!-- Card 9 -->
-             <div class="col-md-2">
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-2 animated-column animate-left">
                 <div class="card">
-                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title 5</h5>
-                    <p class="card-text">Some quick example text.</p>
-                  </div>
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 4</h5>
+                    </div>
                 </div>
-              </div>
-                <!-- Card 10 -->
-             <div class="col-md-2">
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-2 animated-column animate-right">
                 <div class="card">
-                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title 5</h5>
-                    <p class="card-text">Some quick example text.</p>
-                  </div>
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 5</h5>
+                    </div>
                 </div>
-              </div>
-  <!-- end of card     -->
-          
+            </div>
         </div>
-      </div>
-      
+    </div>
 </section>
+
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
