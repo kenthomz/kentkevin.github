@@ -53,7 +53,7 @@
     background-color: #0056b3; /* Darker on hover */
 }
 
-.particles-js {
+.particles {
     position: absolute; /* Absolute positioning */
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@
 </nav>
 
 <section class="hero-banner">
-    <div id="particles-js"></div> <!-- Changed to id, as tsParticles targets by ID -->
+    <div id="particles-js" class="particles"></div>
     <div class="header-content">
         <div class="right-header">
             <div class="name">
@@ -122,72 +122,108 @@
         </div>
     </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.34.1/tsparticles.min.js"></script>
-<script>
-    tsParticles.load("particles-js", {
-        particles: {
-            number: {
-                value: 150, // Number of particles
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: ["#ff9000", "#ff0266", "#00ffff"] // Particle colors
-            },
-            shape: {
-                type: "circle", // Shape of particles
-            },
-            move: {
-                enable: true,
-                speed: 0.3, // Particle speed
-            },
-            line_linked: {
-                enable: true,
-                distance: 150, // Distance between connected particles
-                color: "#ffffff",
-                opacity: 0.4,
-                width: 1
-            }
-        },
-        interactivity: {
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: "repulse" // Repulse particles on hover
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
                 },
-                onclick: {
-                    enable: true,
-                    mode: "push" // Push new particles on click
-                }
-            }
-        },
-        responsive: [
-            {
-                breakpoint: 1000, // Below this width, apply changes
-                options: {
-                    particles: {
-                        number: {
-                            value: 63 // Fewer particles on smaller screens
-                        },
-                        move: {
-                            speed: 0.6 // Faster movement on smaller screens
-                        }
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
                     },
-                    interactivity: {
-                        events: {
-                            onhover: {
-                                enable: false // Disable hover effect on small screens
-                            }
-                        }
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false
                     }
                 }
-            }
-        ]
-    });
-</script>
-
-</body>
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 1
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </html>
