@@ -225,12 +225,16 @@
 }
 
 /* project css */
+.hover-4 {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
 .hover-4 img {
-    width: 110%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 .hover-4 .hover-overlay {
@@ -271,7 +275,7 @@
 }
 
 .hover-4:hover img {
-    width: 100%;
+    transform: scale(1.1);
 }
 
 .hover-4:hover .hover-overlay {
