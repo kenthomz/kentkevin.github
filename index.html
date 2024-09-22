@@ -53,7 +53,7 @@
     background-color: #0056b3; /* Darker on hover */
 }
 
-.particles {
+.particles-js {
     position: absolute; /* Absolute positioning */
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@
 </nav>
 
 <section class="hero-banner">
-    <div class="particles-js"></div>
+    <div id="particles-js"></div> <!-- Changed to id, as tsParticles targets by ID -->
     <div class="header-content">
         <div class="right-header">
             <div class="name">
@@ -127,28 +127,65 @@
 <script>
     tsParticles.load("particles-js", {
         particles: {
-            number: { value: 100 },
-            color: { value: ["#ff9000", "#ff0266", "#00ffff"] },
-            shape: { type: "circle" },
-            move: { enable: true, speed: 0.3 },
+            number: {
+                value: 150, // Number of particles
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: ["#ff9000", "#ff0266", "#00ffff"] // Particle colors
+            },
+            shape: {
+                type: "circle", // Shape of particles
+            },
+            move: {
+                enable: true,
+                speed: 0.3, // Particle speed
+            },
             line_linked: {
                 enable: true,
-                distance: 150,
+                distance: 150, // Distance between connected particles
                 color: "#ffffff",
                 opacity: 0.4,
-                width: 1,
-            },
+                width: 1
+            }
+        },
+        interactivity: {
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "repulse" // Repulse particles on hover
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push" // Push new particles on click
+                }
+            }
         },
         responsive: [
             {
-                breakpoint: 1000,
+                breakpoint: 1000, // Below this width, apply changes
                 options: {
-                    speed: 0.6,
-                    maxParticles: 63,
-                    connectParticles: false,
-                },
-            },
-        ],
+                    particles: {
+                        number: {
+                            value: 63 // Fewer particles on smaller screens
+                        },
+                        move: {
+                            speed: 0.6 // Faster movement on smaller screens
+                        }
+                    },
+                    interactivity: {
+                        events: {
+                            onhover: {
+                                enable: false // Disable hover effect on small screens
+                            }
+                        }
+                    }
+                }
+            }
+        ]
     });
 </script>
 
