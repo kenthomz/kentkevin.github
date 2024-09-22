@@ -18,7 +18,7 @@
     align-items: center; /* Center content vertically */
     text-align: left; /* Left-align text */
     padding: 20px; /* Padding around content */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: #141010;
 }
 
 .header-content {
@@ -61,6 +61,56 @@
     height: 100%;
     z-index: 0; /* Behind other content */
 }
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s; /* Delay for effect */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name .loader span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.name .loader span:nth-child(1) { animation-delay: 0.1s; }
+.name .loader span:nth-child(2) { animation-delay: 0.2s; }
+.name .loader span:nth-child(3) { animation-delay: 0.3s; }
+.name .loader span:nth-child(4) { animation-delay: 0.4s; }
+.name .loader span:nth-child(5) { animation-delay: 0.5s; }
+.name .loader span:nth-child(6) { animation-delay: 0.6s; }
+.name .loader span:nth-child(7) { animation-delay: 0.7s; }
+.name .loader span:nth-child(8) { animation-delay: 0.8s; }
+.name .loader span:nth-child(9) { animation-delay: 0.9s; }
+.name .loader span:nth-child(10) { animation-delay: 1s; }
+.name .loader span:nth-child(11) { animation-delay: 1.1s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-con {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 1.2s; /* Delay for effect */
+}
+
 </style>
 <body>
    
