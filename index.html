@@ -9,88 +9,65 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .header-content .left-header .image {
-  -webkit-transform: translateX(-120%) scale(0);
-  transform: translateX(-120%) scale(0);
-  -webkit-animation: slideImg 1s ease-in-out forwards;
-  animation: slideImg 1s ease-in-out forwards;
-  -webkit-animation-delay: 6.5s;
-  animation-delay: 6.5s;
+.hero-banner {
+    position: relative;
+    height: 100vh; /* Full height */
+    color: white; /* Text color */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding around content */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
+
 .header-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr);
-  grid-template-columns: repeat(2, 1fr);
-  min-height: 100vh;
+    position: relative;
+    z-index: 1; /* Ensure content is above particles */
 }
 
-.header-content .left-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
+.left-header .image img {
+    width: 200px; /* Set image width */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
-.header-content .left-header .image {
-  height: 70%;
-  width: 70%;
-  margin-left: 4rem;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+.right-header {
+    max-width: 600px; /* Limit width for readability */
+    padding: 20px; /* Padding */
 }
 
-.header-content .left-header .image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -webkit-box-shadow: -10px -10px 15px #020529,
-    10px 10px 15px #000000;
-  box-shadow: -10px -10px 15px #020529,
-    10px 10px 15px #000000;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+.intro {
+    margin: 20px 0; /* Space around intro */
+    font-size: 1.2em; /* Larger font for intro */
 }
 
-.header-content .left-header .image img:hover {
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+.btn-con {
+    margin-top: 20px; /* Space above button */
 }
 
-.header-content .right-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-right: 18rem;
+.main-btn {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
-.header-content .right-header .name .span {
-  font-size: 3rem;
+.main-btn:hover {
+    background-color: #0056b3; /* Darker on hover */
 }
 
-.header-content .right-header .name p {
-  font-size: 4rem;
+.particles {
+    position: absolute; /* Absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind other content */
 }
 
-.header-content .right-header p.intro {
-  margin: 1.5rem 0;
-  line-height: 2rem;
-}
 </style>
 <body>
    
@@ -162,4 +139,104 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+<script>
+      particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 100,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false
+                }
+            },
+            "size": {
+                "value": 5,
+                "random": true,
+                "anim": {
+                    "enable": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 1
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
 </html>
