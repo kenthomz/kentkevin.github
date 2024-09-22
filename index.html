@@ -122,30 +122,35 @@
         </div>
     </div>
 </section>
-</body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.34.1/tsparticles.min.js"></script>
 <script>
-    var particles = Particles.init({
-        selector: ".particles-js", // Use the CSS class for targeting
-        color: ["#ff9000", "#ff0266", "#00ffff"], // New colors
-        connectParticles: true, // Connect particles with lines
-        speed: 0.3, // Particle movement speed
-        maxParticles: 150, // Max particles to display
+    tsParticles.load("particles-js", {
+        particles: {
+            number: { value: 100 },
+            color: { value: ["#ff9000", "#ff0266", "#00ffff"] },
+            shape: { type: "circle" },
+            move: { enable: true, speed: 0.3 },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1,
+            },
+        },
         responsive: [
             {
-                breakpoint: 1000, // On screens below 1000px width
+                breakpoint: 1000,
                 options: {
-                    speed: 0.6, // Faster speed on smaller screens
-                    color: ["#ff9000", "#ff0266", "#00ffff", "#15ff00"], // New set of colors for smaller screens
-                    maxParticles: 63, // Reduced number of particles
-                    connectParticles: false // Disable connection of particles on smaller screens
-                }
-            }
-        ]
+                    speed: 0.6,
+                    maxParticles: 63,
+                    connectParticles: false,
+                },
+            },
+        ],
     });
 </script>
 
+</body>
 </html>
