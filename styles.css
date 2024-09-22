@@ -225,7 +225,7 @@
 }
 
 /* project css */
-section.my__project {
+.my__project {
     background: #141010;
 }
 .hover-4 {
@@ -237,7 +237,7 @@ section.my__project {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
-}
+} 
 
 .hover-4 .hover-overlay {
     position: absolute;
