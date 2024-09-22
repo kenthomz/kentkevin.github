@@ -225,127 +225,60 @@
 }
 
 /* project css */
-.item {
-    width: 400px;
-    height: 400px;
-    background-color: white;
-    position: relative;
-    display: inline-block;
-    margin: 1% 2% 1% 0%;
-    overflow: hidden;
-    box-shadow: 2px 3px 10px #444444;
-}
-
-.item .overlay {
-    color: #000;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0;
-    transition: all 0.5s ease;
-    position: absolute;
-    top: 0;
-}
-
-/* effect-clean */
-.clean .overlay span:nth-child(1) {
-    position: absolute;
-    left: 30%;
-    top: 35%;
-    font-size: 80px;
-    font-weight: bold;
-    font-family: coustard;
-    transform: translateX(-50%);
-}
-
-.clean .overlay span:nth-child(2) {
-    position: absolute;
+.hover-4 img {
+    width: 110%;
     top: 50%;
     left: 50%;
-    font-size: 17px;
-    transform: translateX(-50%);
-}
-
-.clean .overlay:hover {
-    opacity: 0.93;
-}
-
-.clean .overlay:hover span:nth-child(1) {
-    animation: slide 0.4s;
-}
-
-.clean .overlay:hover span:nth-child(2) {
-    animation: slide 0.7s;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(-10%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* effect-uncover */
-.uncover .overlay span:nth-child(1),
-.uncover .overlay span:nth-child(2) {
+    transform: translate(-50%, -50%);
+  }
+  
+  .hover-4 .hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+  }
+  
+  .hover-4-title {
     position: absolute;
-    left: 50%;
-    font-size: 80px;
-    font-weight: bold;
-    font-family: coustard;
-    transform: translateX(-50%);
-    opacity: 0;
-}
-
-.uncover .overlay:hover {
-    opacity: 0.9;
-}
-
-.uncover .overlay:hover span:nth-child(1),
-.uncover .overlay:hover span:nth-child(2) {
-    animation: fadein 0.6s forwards;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* effect-explode */
-.explode .overlay span:nth-child(1) {
+    bottom: 0;
+    right: 0;
+    padding: 3rem;
+    z-index: 99;
+  }
+  
+  .hover-4-description {
     position: absolute;
-    left: 10%;
-    top: 45%;
-    font-size: 200px;
-    font-weight: bold;
-    font-family: coustard;
-    transform: translateX(-50%);
+    top: 2rem;
+    left: 2rem;
+    text-align: right;
+    border-right: 3px solid #fff;
+    padding: 0 1rem;
+    z-index: 99;
+    transform: translateX(-1.5rem);
     opacity: 0;
-}
-
-.explode .overlay:hover {
-    opacity: 0.9;
-}
-
-.explode .overlay:hover span:nth-child(1) {
-    animation: focus 0.4s forwards;
-}
-
-@keyframes focus {
-    0% {
-        transform: scale(1.4) translateX(-30%);
-        filter: blur(10px);
-        opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  @media (min-width: 992px) {
+    .hover-4-description {
+      width: 50%;
     }
-    100% {
-        transform: scale(1) translateX(0%);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
+  }
+  
+  .hover-4:hover img {
+    width: 100%;
+  }
+  
+  .hover-4:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-4:hover .hover-4-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-4:hover .hover-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
