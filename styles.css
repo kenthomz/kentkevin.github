@@ -280,25 +280,37 @@
     opacity: 1;
 }
 
-.progress-circle-back {
-	fill: none; 
-	stroke: #D2D2D2;
-	stroke-width:10px;
+.card {
+    position: relative;
+    padding-bottom: 40px; /* Space for progress bar */
 }
 
-.progress-circle-prog {
-	fill: none; 
-	stroke: #7E3451;
-	stroke-width: 10px;  
-	stroke-dasharray: 100 999;    
-	stroke-dashoffset: 0px;
-    transition: stroke-dasharray 0.7s linear 0s;
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 0% 70%, /* Change percentage */
+        #ddd 70% 100% /* Background for unfilled part */
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.progress-text {
-	width: 100%;
-	position: absolute;
-	top: 60px;
-	text-align: center;
-	font-size: 2em;
+.progress-circle .inside-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4caf50;
 }
