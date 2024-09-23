@@ -318,11 +318,19 @@
     position: relative;
     padding-bottom: 30px; /* Space for progress bar */
 }
-.GitHub .progress-circle.small {  background: conic-gradient(
-    #F05033 0% 70%, /* Change percentage */
+.html .progress-circle.small {  background: conic-gradient(
+    #D1382B 0% 70%, /* Change percentage */
     #ddd 70% 100%   /* Background for unfilled part */
 );}
 .git .progress-circle.small {  background: conic-gradient(
+    #F05033 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.boots .progress-circle.small {  background: conic-gradient(
+    #F05033 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.github .progress-circle.small {  background: conic-gradient(
     #1B1F23 0% 70%, /* Change percentage */
     #ddd 70% 100%   /* Background for unfilled part */
 );}
