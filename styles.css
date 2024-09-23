@@ -318,7 +318,38 @@
     position: relative;
     padding-bottom: 30px; /* Space for progress bar */
 }
-
+.GitHub .progress-circle.small {  background: conic-gradient(
+    #F05033 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.git .progress-circle.small {  background: conic-gradient(
+    #1B1F23 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.wp .progress-circle.small {  background: conic-gradient(
+    #379AD6 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.boots .progress-circle.small {  background: conic-gradient(
+    #563D7C 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.react .progress-circle.small {  background: conic-gradient(
+    #61DAFB 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.jquery .progress-circle.small {  background: conic-gradient(
+    #0868AC 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.js .progress-circle.small {  background: conic-gradient(
+    #D3B62A 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
+.css .progress-circle.small {  background: conic-gradient(
+    #379AD6 0% 70%, /* Change percentage */
+    #ddd 70% 100%   /* Background for unfilled part */
+);}
 .progress-circle.small {
     width: 50px;   /* Smaller size */
     height: 50px;  /* Smaller size */
