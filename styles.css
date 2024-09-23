@@ -280,7 +280,7 @@
     opacity: 1;
 }
 
-.card {
+  .card {
     position: relative;
     padding-bottom: 40px; /* Space for progress bar */
 }
@@ -311,6 +311,40 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    font-weight: bold;
+    color: #4caf50;
+}
+.card {
+    position: relative;
+    padding-bottom: 30px; /* Space for progress bar */
+}
+
+.progress-circle.small {
+    width: 50px;   /* Smaller size */
+    height: 50px;  /* Smaller size */
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 0% 70%, /* Change percentage */
+        #ddd 70% 100%   /* Background for unfilled part */
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-circle.small .inside-circle {
+    width: 35px;    /* Adjusted for small size */
+    height: 35px;   /* Adjusted for small size */
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;   /* Smaller text */
     font-weight: bold;
     color: #4caf50;
 }
