@@ -224,8 +224,11 @@
     }
 }
 /* bio css */
-.section.bio__info{
+section.bio__info{
     background: #141010;
+}
+section .card{
+    border:unset;
 }
 /* project css */
 .my__project {
