@@ -461,8 +461,8 @@ section.bio__info .card{
 	position: relative;
 	z-index: 20;
 }
-.css-serve .section-services  .single-service .circle-before {
-    background-color: #379AD6;
+.section-services .css-serve .single-service .circle-before {
+    background-color: #379AD6 !important;
 
 }
 .section-services .single-service .circle-before {
