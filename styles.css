@@ -461,7 +461,10 @@ section.bio__info .card{
 	position: relative;
 	z-index: 20;
 }
+.section-services .css-serve .single-service .circle-before {
+    background-color: #379AD6;
 
+}
 .section-services .single-service .circle-before {
     position: absolute;
     top: 0;
@@ -469,13 +472,15 @@ section.bio__info .card{
     transform: translate(40%, -40%);
     width: 150px;
     height: 150px;
-    background-color: #ff4500;
+    background-color: #E93E30;
     border: 6px solid #504f93;
     border-radius: 50%;
     opacity: 0.5;
     z-index: 10;
     transition: all .6s;
 }
+
+
 
 .section-services .single-service:hover .circle-before {
 	width: 100%;
@@ -491,7 +496,7 @@ section.bio__info .card{
 	margin-bottom: 26px;
     width: 70px;
     height: 70px;
-    background-color: #ff4500;
+    background-color: #E93E30;
     border-radius: 5px;
     line-height: 70px;
     text-align: center;
@@ -502,7 +507,7 @@ section.bio__info .card{
 
 .section-services .single-service:hover .icon {
 	background-color: #fff;
-	color: #ff4500;
+	color: #E93E30;
 }
 
 .section-services .single-service .title {
