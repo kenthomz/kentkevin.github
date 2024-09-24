@@ -229,6 +229,7 @@ section.bio__info{
 }
 section .card{
     border:unset;
+    background: #141010;
 }
 /* project css */
 .my__project {
