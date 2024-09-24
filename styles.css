@@ -223,7 +223,10 @@
         opacity: 1;
     }
 }
-
+/* bio css */
+.section.bio__info{
+    background: #141010;
+}
 /* project css */
 .my__project {
     background: #141010;
