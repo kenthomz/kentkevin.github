@@ -486,7 +486,7 @@
 <section class="form">
     <div class="container mt-5">
         <div class="row justify-content-center">
-        <h2>Contact Us</h2>
+        <h2>Contact Me</h2>
         </div>
        <!-- Contact Form -->
        <div class="row justify-content-center">
@@ -504,7 +504,7 @@
             <label for="message">Message</label>
             <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
        </div>
 </div>
@@ -522,39 +522,30 @@
     </div>
 
 </section>
+
+<footer class="footer">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            <a class="navbar-brand" href="#">BrandLogo</a>
+            <div class="collapse navbar-collapse" id="footerNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://kenthomz.github.io/kentkevin.github/script.js"></script>
-
-
-
-<script>
-   // Handle form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent page reload
-
-    // Send the form data using EmailJS
-    emailjs.sendForm('service_3physnl', 'template_i6q74yv', this)
-        .then(function(response) {
-            // Show success message pop-up
-            document.getElementById('popupModal').style.display = 'block';
-            console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-            alert('FAILED...', error);
-        });
-});
-
-// Close pop-up modal
-document.getElementById('closePopup').addEventListener('click', function() {
-    document.getElementById('popupModal').style.display = 'none';
-});
-
-// Close success message
-document.getElementById('closeSuccessPopup').addEventListener('click', function() {
-    document.getElementById('popupModal').style.display = 'none';
-});
-
-</script>
 </html>

@@ -95,3 +95,28 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
 });
+
+  // Handle form submission
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Send the form data using EmailJS
+    emailjs.sendForm('service_3physnl', 'template_i6q74yv', this)
+        .then(function(response) {
+            // Show success message pop-up
+            document.getElementById('popupModal').style.display = 'block';
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            alert('FAILED...', error);
+        });
+});
+
+// Close pop-up modal
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('popupModal').style.display = 'none';
+});
+
+// Close success message
+document.getElementById('closeSuccessPopup').addEventListener('click', function() {
+    document.getElementById('popupModal').style.display = 'none';
+});

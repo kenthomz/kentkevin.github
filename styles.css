@@ -647,3 +647,8 @@ button {
 button:hover {
     background-color: #45a049; /* Darker green */
 }
+form#contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+}
