@@ -652,3 +652,18 @@ form#contact-form {
     padding: 2rem;
     border-radius: 8px;
 }
+/* footer css */
+.copyrith{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* media query */
+@media (max-width:500px) {
+section.front__skills.mb-5 .card img {
+    width: 50%;
+    object-fit: cover;
+    text-align: center;
+    margin: auto;
+}
+}
