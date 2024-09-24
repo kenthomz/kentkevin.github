@@ -477,6 +477,18 @@ section.bio__info .card{
     background-color: #4CAF50 !important;
 
 }
+.section-services   .css-serve .single-service .icon {
+    background-color: #379AD6 !important;
+}
+.section-services   .jav-serve .single-service .icon {
+    background-color: #D3B62A !important;
+}
+.section-services   .wp-serve  .single-service .icon {
+    background-color: #379AD6 !important;
+}
+.section-services   .shop-serve .single-service .icon {
+    background-color: #4CAF50 !important;
+}
 .section-services .single-service .circle-before {
     position: absolute;
     top: 0;
