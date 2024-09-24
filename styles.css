@@ -1,3 +1,7 @@
+body{
+  
+    background:  #E6EDF7 ;
+}
 .hero-banner {
     position: relative;
     height: 100vh; /* Full height */
