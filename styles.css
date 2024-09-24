@@ -489,6 +489,12 @@ section.bio__info .card{
 .section-services   .shop-serve .single-service .icon {
     background-color: #4CAF50 !important;
 }
+.section-services  span.icon img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 0 6px;
+}
 .section-services .single-service .circle-before {
     position: absolute;
     top: 0;
