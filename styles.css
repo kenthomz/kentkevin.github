@@ -31,8 +31,9 @@ h2 {
 }
 
 .intro {
-    margin: 20px 0; /* Space around intro */
-    font-size: 1.2em; /* Larger font for intro */
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .btn-con {
@@ -48,7 +49,7 @@ h2 {
     transition: background-color 0.3s; /* Smooth transition */
 }
 .name .span.loader {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
 }
 .name p {
     font-size: 4.2rem;
@@ -236,6 +237,16 @@ h2 {
 /* bio css */
 section.bio__info{
     background: #141010;
+}
+section.bio__info p {
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+}
+section.bio__info ul {
+    padding: 0 2rem;
+}
+section.bio__info ul li {
+    font-size: 1.1rem !important;
 }
 section.bio__info .card{
     border:unset;
