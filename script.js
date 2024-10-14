@@ -123,7 +123,7 @@ document.getElementById('closeSuccessPopup').addEventListener('click', function(
 
 document.addEventListener('DOMContentLoaded', function() {
     // Bind smooth scroll to all links within the TOC
-    document.querySelectorAll('.table-of-contents a').forEach(function(link) {
+    document.querySelectorAll('#navbarNav a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();  // Prevent the default jump behavior
 
