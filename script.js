@@ -120,3 +120,26 @@ document.getElementById('closePopup').addEventListener('click', function() {
 document.getElementById('closeSuccessPopup').addEventListener('click', function() {
     document.getElementById('popupModal').style.display = 'none';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Bind smooth scroll to all links within the TOC
+    document.querySelectorAll('.table-of-contents a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();  // Prevent the default jump behavior
+
+            var targetHandle = this.getAttribute('href');  // Get the href attribute (ID of the section)
+            var target = document.querySelector(targetHandle);  // Find the target section by ID
+
+            if (target) {
+                // Smooth scroll to the target
+                window.scrollTo({
+                    top: target.offsetTop - 80,  // Adjust for any fixed header offset
+                    behavior: 'smooth'  // Smooth scrolling
+                });
+
+                // Update the URL hash after the scroll
+                window.history.pushState(null, null, targetHandle);
+            }
+        });
+    });
+});
