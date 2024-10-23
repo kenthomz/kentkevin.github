@@ -36,10 +36,12 @@ h2 {
     font-weight: 700;
 }
 
-.btn-con {
+.hero-banner .btn-con .btn-con {
     margin-top: 20px; /* Space above button */
 }
-
+a:hover {
+    color: #fff;
+}
 .main-btn {
     background-color: #007bff; /* Button color */
     color: white; /* Text color */
