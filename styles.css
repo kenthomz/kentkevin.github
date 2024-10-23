@@ -40,7 +40,7 @@ h2 {
     margin-top: 20px; /* Space above button */
 }
 .hero-banner .btn-con  a:hover {
-    color: #fff;
+    color: #fff !important;
 }
 .main-btn {
     background-color: #007bff; /* Button color */
