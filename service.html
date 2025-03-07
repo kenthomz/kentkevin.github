@@ -811,46 +811,59 @@ us for fast communication using our Bomb bomb video messaging system. We believe
         </div>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+         document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded");
 
-    const steps = document.querySelectorAll(".process-steps .step h3");
-    console.log("Steps found:", steps);
+    const stepsSections = document.querySelectorAll(".process-steps");
 
-    if (steps.length === 0) {
-        console.error(" No .step h3 elements found.");
+    if (stepsSections.length === 0) {
+        console.error(" No .process-steps elements found.");
         return;
     }
 
-    steps.forEach((step, index) => {
-        console.log(`Step ${index + 1}:`, step, "Content:", step.textContent);
+    const animateNumbers = (steps) => {
+        steps.forEach((step) => {
+            const targetNumber = parseInt(step.textContent.trim(), 10);
+
+            if (isNaN(targetNumber)) {
+                console.error(" Invalid number:", step.textContent);
+                return;
+            }
+
+            let currentNumber = 0;
+            const animateNumber = () => {
+                if (currentNumber < targetNumber) {
+                    currentNumber++;
+                    step.textContent = currentNumber;
+                    setTimeout(animateNumber, 400); 
+                } else {
+                    step.textContent = targetNumber;
+                }
+            };
+
+            step.textContent = 0;
+            animateNumber();
+        });
+    };
 
   
-        const targetNumber = parseInt(step.textContent.trim(), 10);
-        console.log("🎯 Parsed number:", targetNumber);
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const steps = entry.target.querySelectorAll(".step h3");
+                    animateNumbers(steps);
+                    observer.unobserve(entry.target); 
+                }
+            });
+        },
+        { threshold: 0.5 } 
+    );
 
-        if (isNaN(targetNumber)) {
-            console.error(" Invalid number:", step.textContent);
-            return;
-        }
+  
+    stepsSections.forEach((section) => observer.observe(section));
 
-        let currentNumber = 0;
-
-        const animateNumber = () => {
-            if (currentNumber < targetNumber) {
-                currentNumber++;
-                step.textContent = currentNumber;
-                setTimeout(animateNumber, 600); 
-            } else {
-                step.textContent = targetNumber;
-            }
-        };
-
-        step.textContent = 0;
-        animateNumber();
-    });
-
-    console.log("✅ Animation script initialized.");
+    console.log(" Scroll animation script initialized.");
 });
 
     </script>
