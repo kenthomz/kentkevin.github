@@ -810,5 +810,49 @@ us for fast communication using our Bomb bomb video messaging system. We believe
             <p>Copyright 2025 | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM fully loaded");
+
+    const steps = document.querySelectorAll(".process-steps .step h3");
+    console.log("Steps found:", steps);
+
+    if (steps.length === 0) {
+        console.error(" No .step h3 elements found.");
+        return;
+    }
+
+    steps.forEach((step, index) => {
+        console.log(`Step ${index + 1}:`, step, "Content:", step.textContent);
+
+  
+        const targetNumber = parseInt(step.textContent.trim(), 10);
+        console.log("🎯 Parsed number:", targetNumber);
+
+        if (isNaN(targetNumber)) {
+            console.error(" Invalid number:", step.textContent);
+            return;
+        }
+
+        let currentNumber = 0;
+
+        const animateNumber = () => {
+            if (currentNumber < targetNumber) {
+                currentNumber++;
+                step.textContent = currentNumber;
+                setTimeout(animateNumber, 600); 
+            } else {
+                step.textContent = targetNumber;
+            }
+        };
+
+        step.textContent = 0;
+        animateNumber();
+    });
+
+    console.log("✅ Animation script initialized.");
+});
+
+    </script>
 </body>
 </html>
