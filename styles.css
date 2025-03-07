@@ -39,8 +39,9 @@ h2 {
 .btn-con {
     margin-top: 20px; /* Space above button */
 }
-.hero-banner .btn-con  a:hover {
+.btn-con  a:hover {
     color: #fff !important;
+    text-decoration: none !important;
 }
 .main-btn {
     background-color: #007bff; /* Button color */
